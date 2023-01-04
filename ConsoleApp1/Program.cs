@@ -38,6 +38,18 @@ public class Program
 
         // ---------------- TEST ASSIGNMENT 1 ----------------
 
+        Fraction f1 = new Fraction();
+        Console.WriteLine("Phan so f1:");
+        Console.WriteLine("Nhap tu so: ");
+        f1.TuSo = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Nhap mau so: ");
+        f1.MauSo = Convert.ToInt32(Console.ReadLine());
+
+        f1.InPhanSo();
+        f1.RutGon();
+        f1.InPhanSo();
+
+
 
     }
 }
