@@ -25,15 +25,15 @@ public class Program
         //    // n[i]
         //}
 
-        ////INPUT AND OUTPUT
+        //     INPUT AND OUTPUT
         //string input = Console.ReadLine(); // scan
         //int num = Convert.ToInt32(input);
         //Console.WriteLine("num = " + num);
 
-        ////CLASS AND OBJECT
-        Human h = new Human();
-        h.name = "Hoang Duy Quoc";
-        h.Run();
+        //    CLASS AND OBJECT
+        //Human h = new Human();
+        //h.name = "Hoang Duy Quoc";
+        //h.Run();
 
 
         // ---------------- TEST ASSIGNMENT 1 ----------------
