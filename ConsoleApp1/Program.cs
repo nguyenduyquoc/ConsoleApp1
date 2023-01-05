@@ -1,4 +1,6 @@
-﻿using ConsoleApp1.Session1;
+﻿using ConsoleApp1.Assignment_1;
+using ConsoleApp1.Session1;
+using ConsoleApp1.Session2;
 using System;
 
 public class Program
@@ -31,9 +33,9 @@ public class Program
         //Console.WriteLine("num = " + num);
 
         //    CLASS AND OBJECT
-        //Human h = new Human();
-        //h.name = "Hoang Duy Quoc";
-        //h.Run();
+        Human h = new Human();
+        h.name = "Hoang Duy Quoc";
+        h.Run();
 
 
         // ---------------- TEST ASSIGNMENT 1 ----------------
@@ -49,6 +51,34 @@ public class Program
         f1.RutGon();
         f1.InPhanSo();
 
+
+        Dog d = new Dog("husky", 20, "black");
+        
+        d.Color = "yellow";
+        d.Weight = 20;
+
+        Console.WriteLine(d.Weight);
+
+        Dog[] dogs = new Dog[10];
+
+        for(int i = 0; i < dogs.Length; i ++)
+        {
+            dogs[i] = new Dog();
+        }
+
+        foreach(Dog o in dogs)
+        {
+            o.Color = "black";
+        }
+
+        List<Dog> doglist = new List<Dog>();
+        doglist.Add(new Dog());
+        Console.WriteLine(doglist.Count);
+
+        List<int> listint = new List<int>();
+     
+
+       
 
 
     }

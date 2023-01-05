@@ -11,6 +11,20 @@ namespace ConsoleApp1.Session1
         public string name;
         public int age;
 
+        private string address;
+
+        public Human()
+        {
+
+        }
+
+        public Human(string name, int age, string address)
+        {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
+
         public void Eat()
         {
             Console.WriteLine("Eating.....");
