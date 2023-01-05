@@ -14,7 +14,7 @@ namespace ConsoleApp1.Assignment_2
 
         public abstract void UpdatePhone(String name, String oldPhone, String newPhone);
 
-        public abstract PhoneBook SearchPhone(String name);
+        public abstract PhoneNumber SearchPhone(String name);
 
         public abstract void Sort();
     }

@@ -33,7 +33,7 @@ namespace ConsoleApp1.Assignment_2
                         if (t.Equals(phone))
                         {
                             dem2 = true;
-                            break;
+                            return;
                         }
                     }
                     if(!dem2)
@@ -53,12 +53,25 @@ namespace ConsoleApp1.Assignment_2
 
         public override void RemovePhone(string name)
         {
-            throw new NotImplementedException();
+            foreach (PhoneNumber phn in phonelist)
+            {
+                if (phn.Name.Equals(name))
+                {
+                    phonelist.Remove(phn);
+                }
+            }
         }
 
-        public override PhoneBook SearchPhone(string name)
+        public override PhoneNumber SearchPhone(string name)
         {
-            throw new NotImplementedException();
+            foreach (PhoneNumber phn2 in phonelist)
+            {
+                if (phn2.Name.Equals(name))
+                {
+                    return phn2;
+                }
+            }
+            return null;
         }
 
         public override void Sort()
@@ -68,7 +81,14 @@ namespace ConsoleApp1.Assignment_2
 
         public override void UpdatePhone(string name, string oldPhone, string newPhone)
         {
-            throw new NotImplementedException();
+            foreach (PhoneNumber phn in phonelist)
+            {
+                if ( phn.Name.Equals(name) ) {
+                    phn.Tel.Remove(oldPhone);
+                    phn.Tel.Add(newPhone);
+                    return;
+                }
+            }
         }
     }
 }
