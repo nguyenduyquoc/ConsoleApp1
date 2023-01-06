@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1.Assignment_1;
+using ConsoleApp1.Assignment_2;
 using ConsoleApp1.Session1;
 using ConsoleApp1.Session2;
 using System;
@@ -76,6 +77,17 @@ public class Program
         Console.WriteLine(doglist.Count);
 
         List<int> listint = new List<int>();
+
+
+
+        // Asignment-2
+
+        PhoneBook pb1 = new PhoneBook();
+        pb1.InsertPhone("nguyen duy quoc", "0962027042");
+        pb1.InsertPhone("hoang duy quoc", "0962027052");
+        pb1.InsertPhone("nguyen duy khanh", "0962027642");
+        pb1.InsertPhone("nguyen duy khanh", "0962027644");
+       
      
 
        
