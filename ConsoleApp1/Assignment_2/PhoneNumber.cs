@@ -31,6 +31,10 @@ namespace ConsoleApp1.Assignment_2
             Name = name;
             Tel = tel;
         }
-       
+
+        public override string? ToString()
+        {
+            return this.Name + "  " + this.Tel ;
+        }
     }
 }
