@@ -18,6 +18,13 @@ namespace ConsoleApp1.Assignment_2
             set {phonelist = value; }
         }
 
+        //Constructors
+        public PhoneBook() { }
+        public PhoneBook(List<PhoneNumber> phoneList)
+        {
+            this.PhoneList = phoneList;
+        }
+
         public override void InsertPhone(string name, string phone)
         {
             Boolean dem = false;
@@ -58,6 +65,7 @@ namespace ConsoleApp1.Assignment_2
                 if (phn.Name.Equals(name))
                 {
                     phonelist.Remove(phn);
+                    return;
                 }
             }
         }
@@ -76,7 +84,7 @@ namespace ConsoleApp1.Assignment_2
 
         public override void Sort()
         {
-            throw new NotImplementedException();
+            PhoneList.Sort((x, y) => x.Name.CompareTo(y.Name));
         }
 
         public override void UpdatePhone(string name, string oldPhone, string newPhone)

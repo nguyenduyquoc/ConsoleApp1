@@ -9,7 +9,7 @@ namespace ConsoleApp1.Assignment_2
     internal class PhoneNumber
     {
         private string name;
-        List<string> tel = new List<string>();
+        private List<string> tel = new List<string>();
 
         public string Name
         {
@@ -23,6 +23,9 @@ namespace ConsoleApp1.Assignment_2
             set { tel = value ; } 
         }
 
+
+        public PhoneNumber() {
+        }
         public PhoneNumber(string name, List<string> tel)
         {
             Name = name;
