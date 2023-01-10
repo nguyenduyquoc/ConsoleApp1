@@ -1,13 +1,27 @@
 ﻿using ConsoleApp1.Assignment_1;
 using ConsoleApp1.Assignment_2;
+using ConsoleApp1.Assignment_4;
 using ConsoleApp1.Session1;
 using ConsoleApp1.Session2;
+using ConsoleApp1.Session4;
 using System;
 
 public class Program
 {
     public static void Main(string[] args)
     {
+
+        News n1 = new News();
+        n1.Id = 1212;
+        n1.Title = "hfejkfhsf";
+        n1.Author = "háhfkshfkasf";
+        n1.Content = "sfkasfhaskf";
+        n1.PublishDate = "22-3-2012";
+        
+        n1.Calculate();
+        n1.Display();
+
+        
      //   int x = 10;
      //   double y = 3.14;
      //   Console.WriteLine("Hello world: " + x);
@@ -90,10 +104,7 @@ public class Program
         pb1.InsertPhone("sfkashkfashfsdfha", "0962024844");
 
 
-        foreach (PhoneNumber phn in pb1.PhoneList)
-        {
-            Console.WriteLine(phn.ToString());
-        }
+       
 
         foreach (PhoneNumber pn in pb1.PhoneList)
         {
@@ -110,5 +121,53 @@ public class Program
 
 
 
+    }
+
+    public static void Main1(string[] args)
+    {
+    //    DemoDelegate.Alert("Cam thanh vien duoi 1 tuoi");
+
+    //    DemoDelegate d = new DemoDelegate();
+     //   d.ShowMessage("Canh bao lan thu nhat");
+
+
+        PrintString ps = new PrintString(ShowDanger);
+     //   ps("nguy hiem");
+
+    //    PrintString ps1 = new PrintString(DemoDelegate.Alert);
+     //   PrintString ps2 = new PrintString(new DemoDelegate().ShowMessage);
+
+
+
+        ps += DemoDelegate.Alert;
+        ps += new DemoDelegate().ShowMessage;
+        ps("nguy hiem lam");
+
+
+        ps += (s) =>
+        {
+            Console.WriteLine("Anonymus" + s);
+        };
+
+        ps += delegate (string s)
+        {
+            Console.WriteLine("Anonymus" + s);
+        };
+
+        PrintString ps3 = delegate (string s)
+        {
+            Console.WriteLine("Anonymus" + s);
+        };
+
+
+
+        Button de = new Button(ps3);
+        de.ClickAction();
+    }
+
+
+    public static void ShowDanger(string mg)
+    {
+        Console.WriteLine("Danger :" + mg);
     }
 }

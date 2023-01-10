@@ -34,7 +34,7 @@ namespace ConsoleApp1.Assignment_2
 
         public override string? ToString()
         {
-            return this.Name + "  " + this.Tel ;
+            return this.Name + this.Tel;
         }
     }
 }

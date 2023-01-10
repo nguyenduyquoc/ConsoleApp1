@@ -45,5 +45,7 @@ namespace ConsoleApp1.Session2
         {
             base.SetKind(kind);
         }
+
+        
     }
 }
