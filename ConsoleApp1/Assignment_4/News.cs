@@ -72,14 +72,23 @@ namespace ConsoleApp1.Assignment_4
             Console.WriteLine("AverageRate: " + AverageRate );
         }
 
-        private int[] rateList = new int[3] {4,4,5 };
+        private int[] rateList = new int[3];
 
-       
 
-        public int this[int index]
-        {   get {  return rateList[index]; }
-            set { rateList[index] = value; } 
+        public int[] RateList
+        {
+            get { return rateList; }
+            set { rateList = value; }
         }
+     
+     //   viết như cách này cũng đc
+
+     //   public int this[int index]
+     //   {
+     //       get { return rateList[index]; }
+     //       set { rateList[index] = value; }
+     //   }
+
 
 
 

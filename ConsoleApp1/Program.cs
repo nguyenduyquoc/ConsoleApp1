@@ -17,7 +17,9 @@ public class Program
         n1.Author = "háhfkshfkasf";
         n1.Content = "sfkasfhaskf";
         n1.PublishDate = "22-3-2012";
-        
+        n1.RateList[0] = 5;
+        n1.RateList[1] = 3;
+        n1.RateList[2] = 2;
         n1.Calculate();
         n1.Display();
 
