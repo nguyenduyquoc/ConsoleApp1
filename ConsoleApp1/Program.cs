@@ -5,10 +5,12 @@ using ConsoleApp1.Session1;
 using ConsoleApp1.Session2;
 using ConsoleApp1.Session4;
 using System;
+using Newtonsoft.Json;
+using ConsoleApp1.Session5;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static void Main1(string[] args)
     {
 
         News n1 = new News();
@@ -125,7 +127,7 @@ public class Program
 
     }
 
-    public static void Main1(string[] args)
+    public static void Main2(string[] args)
     {
     //    DemoDelegate.Alert("Cam thanh vien duoi 1 tuoi");
 
@@ -171,5 +173,52 @@ public class Program
     public static void ShowDanger(string mg)
     {
         Console.WriteLine("Danger :" + mg);
+    }
+
+    public static void Main(string[] args)
+    {
+        Thread t1 = new Thread(RunThread);
+        t1.Start("Hello");
+
+        Thread t2 = new Thread(delegate ()
+        {
+            Console.WriteLine("Demo anonymus function");
+        });
+        t2.Start();
+
+
+        Console.WriteLine("Main done");
+    }
+
+    static async Task<string> CallApi()
+    {
+        string url = "https://api.openweathermap.org/data/2.5/weather?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric";
+        HttpClient http = new HttpClient();
+        var rs = await http.GetAsync(url);   // lấy data về
+
+        if(rs.StatusCode  == System.Net.HttpStatusCode.OK)
+        {
+            string content = await rs.Content.ReadAsStringAsync();
+            Root r = JsonConvert.DeserializeObject<Root>(content);
+
+            return content;
+        }
+        return null;
+    }
+
+    public static void RunThread(object o)
+    {
+        for(int i= 0; i < 20; i++)
+        {
+            Console.WriteLine(o + ": " + i);
+            try
+            {
+                Thread.Sleep(1000);
+            }
+            catch(Exception e)
+            {
+
+            }
+        }
     }
 }
