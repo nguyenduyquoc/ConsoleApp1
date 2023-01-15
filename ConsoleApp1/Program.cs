@@ -7,6 +7,7 @@ using ConsoleApp1.Session4;
 using System;
 using Newtonsoft.Json;
 using ConsoleApp1.Session5;
+using house.hanoi;
 
 public class Program
 {
@@ -175,7 +176,7 @@ public class Program
         Console.WriteLine("Danger :" + mg);
     }
 
-    public static void Main(string[] args)
+    public static void Main3(string[] args)
     {
         Thread t1 = new Thread(RunThread);
         t1.Start("Hello");
@@ -220,5 +221,17 @@ public class Program
 
             }
         }
+    }
+
+    public static void Main(string[] args)
+    {
+        ManagerHouse mh1 = new ManagerHouse();
+
+        mh1.ManageHouse.Add(new HaNoiHouse("001", "Ngo 3", "Nha cap 4", "Bac Tu Liem"));
+        mh1.ManageHouse.Add(new HaNoiHouse("002", "Ngo 3", "Nha 2 tang", "Hoan Kiem"));
+        mh1.ManageHouse.Add(new HaNoiHouse("003", "Ngo 1", "Nha 3 tang", "Hai Ba Trung"));
+        mh1.ManageHouse.Add(new HaNoiHouse("004", "Ngo 2", "Nha 3 tang", "Thanh Xuan"));
+
+        mh1.Menu();
     }
 }

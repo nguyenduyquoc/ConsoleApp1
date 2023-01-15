@@ -30,14 +30,14 @@ namespace house.hanoi
         public override void input()
         {
             base.input();
-            Console.WriteLine("Nhap ten quan: ");
+            Console.WriteLine("* Nhap ten quan: ");
             TenQuan = Console.ReadLine();
         }
 
         public override void display()
         {
             base.display();
-            Console.WriteLine("Ten quan : " + TenQuan);
+            Console.WriteLine("* ten quan : " + TenQuan);
         }
     }
 }

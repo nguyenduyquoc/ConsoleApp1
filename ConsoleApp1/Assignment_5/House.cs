@@ -46,21 +46,21 @@ namespace house.cm
         public virtual void input()
         {
             
-            Console.WriteLine("Moi nhap thong tin:");
-            Console.WriteLine("Nhap so nha: ");
+            Console.WriteLine("***Moi nhap thong tin:");
+            Console.WriteLine("* Nhap so nha: ");
             SoNha = Console.ReadLine();
-            Console.WriteLine("Nhap dia chi: ");
+            Console.WriteLine("* Nhap dia chi: ");
             DiaChi = Console.ReadLine();
-            Console.WriteLine("Nhap loai nha: ");
+            Console.WriteLine("* Nhap loai nha: ");
             LoaiNha = Console.ReadLine();
 
         }
 
         public virtual void display()
         {
-            Console.WriteLine("So nha : " + SoNha);
-            Console.WriteLine("Dia chi : " + DiaChi);
-            Console.WriteLine("Loai nha : " + LoaiNha);
+            Console.WriteLine("* so nha   : " + SoNha);
+            Console.WriteLine("* dia chi  : " + DiaChi);
+            Console.WriteLine("* loai nha : " + LoaiNha);
         }
     }
 }
