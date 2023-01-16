@@ -232,6 +232,6 @@ public class Program
         mh1.ManageHouse.Add(new HaNoiHouse("003", "Ngo 1", "Nha 3 tang", "Hai Ba Trung"));
         mh1.ManageHouse.Add(new HaNoiHouse("004", "Ngo 2", "Nha 3 tang", "Thanh Xuan"));
 
-        mh1.Menu();
+        mh1.ShowMenu();
     }
 }

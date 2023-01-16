@@ -61,11 +61,24 @@ namespace house.hanoi
         }
         public void ShowMenu()
         {
-            bool show = true;
-            while (!show)
+            
+            while (Menu() == true)
             {
-                show = Menu();
+                Menu();
             }
+        }
+
+        public bool Continute ()
+        {
+            switch(Console.ReadLine())
+                    {
+                        case "1":
+                            return true;
+                        case "2":
+                            return false;
+                        default:
+                            return true;
+                    }
         }
 
         public bool Menu()
@@ -89,21 +102,65 @@ namespace house.hanoi
                     HaNoiHouse h = new HaNoiHouse();
                     h.input();
                     ManageHouse.Add(h);
-                    return true;
+                    Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
+                    Console.WriteLine("1. Tiep tuc");
+                    Console.WriteLine("2. Thoat chuong trinh");
+                    switch(Console.ReadLine())
+                    {
+                        case "1":
+                            return true;
+                        case "2":
+                            return false;
+                        default:
+                            return true;
+                    }
                 case "2":
                     Console.WriteLine();
-                    DisplayAll();             
-                    return true;
+                    DisplayAll();
+                    Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
+                    Console.WriteLine("1. Tiep tuc");
+                    Console.WriteLine("2. Thoat chuong trinh");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            return true;
+                        case "2":
+                            return false;
+                        default:
+                            return true;
+                    }
                 case "3":
                     Console.WriteLine();
                     Sort();
-                    return true;
+                    Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
+                    Console.WriteLine("1. Tiep tuc");
+                    Console.WriteLine("2. Thoat chuong trinh");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            return true;
+                        case "2":
+                            return false;
+                        default:
+                            return true;
+                    }
                 case "4":
                     Console.WriteLine();
                     Console.Write("Nhap dia chi can tim kiem: ");
                     string diachi = Console.ReadLine();
                     Search(diachi);
-                    return true;
+                    Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
+                    Console.WriteLine("1. Tiep tuc");
+                    Console.WriteLine("2. Thoat chuong trinh");
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            return true;
+                        case "2":
+                            return false;
+                        default:
+                            return true;
+                    }
                 default:
                     return true;
             }
