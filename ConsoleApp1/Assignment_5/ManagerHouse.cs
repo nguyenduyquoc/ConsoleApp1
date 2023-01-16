@@ -105,7 +105,8 @@ namespace house.hanoi
                     Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
                     Console.WriteLine("1. Tiep tuc");
                     Console.WriteLine("2. Thoat chuong trinh");
-                    switch(Console.ReadLine())
+                    Console.Write("Moi ban nhap lua chon: ");
+                    switch (Console.ReadLine())
                     {
                         case "1":
                             return true;
@@ -120,6 +121,7 @@ namespace house.hanoi
                     Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
                     Console.WriteLine("1. Tiep tuc");
                     Console.WriteLine("2. Thoat chuong trinh");
+                    Console.Write("Moi ban nhap lua chon: ");
                     switch (Console.ReadLine())
                     {
                         case "1":
@@ -135,6 +137,7 @@ namespace house.hanoi
                     Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
                     Console.WriteLine("1. Tiep tuc");
                     Console.WriteLine("2. Thoat chuong trinh");
+                    Console.Write("Moi ban nhap lua chon: ");
                     switch (Console.ReadLine())
                     {
                         case "1":
@@ -152,6 +155,7 @@ namespace house.hanoi
                     Console.WriteLine("Ban co muon tiep tuc chuong trinh khong???");
                     Console.WriteLine("1. Tiep tuc");
                     Console.WriteLine("2. Thoat chuong trinh");
+                    Console.Write("Moi ban nhap lua chon: ");
                     switch (Console.ReadLine())
                     {
                         case "1":
