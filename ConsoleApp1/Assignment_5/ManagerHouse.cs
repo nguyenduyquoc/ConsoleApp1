@@ -46,6 +46,7 @@ namespace house.hanoi
                     ketqua.Add(h);
                 }
             }
+
             if (ketqua.Count == 0)
             {
                 Console.WriteLine("khong co ket qua phu hop");

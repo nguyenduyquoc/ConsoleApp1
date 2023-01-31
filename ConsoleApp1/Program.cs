@@ -8,6 +8,7 @@ using System;
 using Newtonsoft.Json;
 using ConsoleApp1.Session5;
 using house.hanoi;
+using ConsoleApp1.Assignment_6;
 
 public class Program
 {
@@ -223,7 +224,7 @@ public class Program
         }
     }
 
-    public static void Main(string[] args)
+    public static void Main4(string[] args)
     {
         ManagerHouse mh1 = new ManagerHouse();
 
@@ -233,5 +234,12 @@ public class Program
         mh1.ManageHouse.Add(new HaNoiHouse("004", "Ngo 2", "Nha 3 tang", "Thanh Xuan"));
 
         mh1.ShowMenu();
+    }
+
+
+    public static void Main(string[] args)
+    {
+        StudentManage s = new StudentManage();  
+        s.ShowMenu();   
     }
 }
