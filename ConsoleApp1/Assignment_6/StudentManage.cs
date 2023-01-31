@@ -22,7 +22,7 @@ namespace ConsoleApp1.Assignment_6
         {
             for(int i = 0; i <  ManageStudent.Count; i++)
             {
-                Console.WriteLine("Sinh vien thu " +i+1);
+                Console.WriteLine("Sinh vien thu " +(i+1));
                 ManageStudent[i].Display();
                 Console.WriteLine();
             }
@@ -39,8 +39,9 @@ namespace ConsoleApp1.Assignment_6
                 {
                     dem++;
                     Console.WriteLine("Id nay da co trong danh sach, ban vui long nhap lai");
+                    return;
                 }
-                break;
+                
                 
             }
 
@@ -123,6 +124,7 @@ namespace ConsoleApp1.Assignment_6
                 if (student.Id.Equals(id))
                 {
                     ManageStudent.Remove(student);
+                    return;
                 }
             }
         }
